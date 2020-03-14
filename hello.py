@@ -1,5 +1,4 @@
 def app(environ, start_response):
-    """Simplest possible application object"""
     # for i in environ['QUERY_STRING']:
     if environ['QUERY_STRING']:
         s = str(environ['QUERY_STRING']).split('&')
@@ -12,3 +11,5 @@ def app(environ, start_response):
         ]
     start_response(status, response_headers)
     return iter([data])
+
+
